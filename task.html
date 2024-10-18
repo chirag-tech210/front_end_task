@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Form</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+</head>
+<body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            return (
+                <div className="max-w-4xl mx-auto mt-10">
+                    <div className="bg-white shadow-md rounded-lg">
+                        <div className="border-b-4 border-purple-600 p-4">
+                            <h1 className="text-2xl font-semibold">Untitled form</h1>
+                            <p className="text-gray-500">Form description</p>
+                        </div>
+                        <div className="p-4">
+                            <div className="border-l-4 border-blue-500 p-4 bg-gray-50 rounded-lg">
+                                <div className="flex justify-between items-center mb-4">
+                                    <input type="text" className="w-full bg-transparent text-lg font-medium" placeholder="Untitled Question" />
+                                    <div className="flex items-center space-x-2">
+                                        <i className="fas fa-image text-gray-500"></i>
+                                        <select className="bg-transparent text-gray-700">
+                                            <option>Multiple choice</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <div className="flex items-center space-x-2">
+                                        <input type="radio" className="form-radio" />
+                                        <input type="text" className="w-full bg-transparent" placeholder="Option 1" />
+                                    </div>
+                                    <div className="flex items-center space-x-2 text-gray-500">
+                                        <i className="fas fa-plus-circle"></i>
+                                        <span>Add option</span>
+                                        <span>or</span>
+                                        <span className="text-blue-600">Add "Other"</span>
+                                    </div>
+                                </div>
+                                <div className="flex justify-between items-center mt-4">
+                                    <div className="flex space-x-2">
+                                        <i className="fas fa-copy text-gray-500"></i>
+                                        <i className="fas fa-trash text-gray-500"></i>
+                                    </div>
+                                    <div className="flex items-center space-x-2">
+                                        <span className="text-gray-500">Required</span>
+                                        <input type="checkbox" className="form-checkbox" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
